@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Calendar Embeds 2025</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">LearnWorlds Reference</p>
+      <h1>Google Calendar Embed Codes</h1>
+      <p class="intro">
+        This page is the central reference for trainer calendars.
+        In LearnWorlds, copy the standard template and only replace the trainer name, divId, and calendarId.
+      </p>
+    </header>
+
+    <section class="instructions">
+      <h2>Template for LearnWorlds</h2>
+      <pre><code>&lt;div id="YOUR_DIV_ID"&gt;&lt;/div&gt;
+&lt;script&gt;
+  (function() {
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const calendarId = "YOUR_GOOGLE_CALENDAR_ID";
+
+    const iframeSrc = `https://calendar.google.com/calendar/embed?src=${calendarId}&amp;ctz=${encodeURIComponent(userTimeZone)}&amp;mode=WEEK`;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = iframeSrc;
+    iframe.style.border = "0";
+    iframe.width = "800";
+    iframe.height = "600";
+
+    document.getElementById("YOUR_DIV_ID").appendChild(iframe);
+  })();
+&lt;/script&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Calendars</h2>
+      <div id="calendar-list"></div>
+    </section>
+  </main>
+
+  <script src="trainers.js"></script>
+</body>
+</html>
